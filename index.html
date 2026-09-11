@@ -1,1 +1,460 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>भारत का भूगोल | Indian Geography | UPSC IAS PCS</title>
+
+    <meta name="description"
+          content="भारत का भूगोल — UPSC, IAS, PCS एवं अन्य प्रतियोगी परीक्षाओं के लिए सरल और व्यवस्थित अध्ययन सामग्री।">
+
+    <meta name="keywords"
+          content="Indian Geography, भारत का भूगोल, Indian Geography Notes, UPSC Geography, IAS Geography, PCS Geography">
+
+    <meta name="author" content="भारत का भूगोल">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Devanagari", sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, #12355b, #176b87);
+            color: white;
+            padding: 18px 6%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: white;
+            text-align: center;
+            padding: 70px 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .hero .tag {
+            display: inline-block;
+            background: #e8f3f7;
+            color: #176b87;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 18px;
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            color: #12355b;
+            margin-bottom: 8px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            color: #176b87;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #5b6470;
+            font-size: 17px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 28px;
+            background: #12355b;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #176b87;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            color: #12355b;
+            font-size: 30px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+
+        .intro {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 55px;
+        }
+
+        .intro h3 {
+            color: #176b87;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
+
+        .chapters {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .chapter {
+            background: white;
+            border: 1px solid #e1e5ea;
+            border-radius: 10px;
+            padding: 22px;
+            transition: 0.2s;
+        }
+
+        .chapter:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+        }
+
+        .chapter-number {
+            color: #176b87;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .chapter h3 {
+            color: #12355b;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .chapter a {
+            color: #176b87;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .search-box {
+            max-width: 650px;
+            margin: 0 auto 45px;
+            display: flex;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccd3da;
+            border-radius: 6px 0 0 6px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 14px 22px;
+            border: none;
+            background: #12355b;
+            color: white;
+            border-radius: 0 6px 6px 0;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #12355b;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 15px;
+            }
+
+            .nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 50px 18px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .chapters {
+                grid-template-columns: 1fr;
+            }
+
+            .intro {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+
+        <div class="logo">
+            भारत का भूगोल
+        </div>
+
+        <nav>
+            <a href="index.html">होम</a>
+            <a href="about.html">प्रस्तावना</a>
+            <a href="chapters.html">अध्याय</a>
+            <a href="notes.html">नोट्स</a>
+            <a href="contact.html">संपर्क</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<section class="hero">
+
+    <div class="tag">
+        UPSC • IAS • PCS • Competitive Exams
+    </div>
+
+    <h1>भारत का भूगोल</h1>
+
+    <h2>Indian Geography</h2>
+
+    <p>
+        भारत के भूगोल को सरल, व्यवस्थित और परीक्षा-केंद्रित
+        तरीके से समझने के लिए एक शैक्षणिक मंच।
+    </p>
+
+    <a href="chapters.html" class="button">
+        अध्ययन शुरू करें →
+    </a>
+
+</section>
+
+
+<main class="container">
+
+    <section class="intro">
+
+        <h3>प्रस्तावना</h3>
+
+        <p>
+            भारत का भूगोल UPSC, IAS, PCS तथा अन्य प्रतियोगी
+            परीक्षाओं की तैयारी में महत्वपूर्ण भूमिका निभाता है।
+            इस वेबसाइट का उद्देश्य भारत के भूगोल से संबंधित
+            विषयों को सरल एवं व्यवस्थित रूप में प्रस्तुत करना है।
+        </p>
+
+    </section>
+
+
+    <div class="section-title">
+
+        <h2>भारत का भूगोल — अध्याय</h2>
+
+        <p>
+            महत्वपूर्ण विषयों को अध्यायवार पढ़ें
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="search"
+            placeholder="अध्याय खोजें..."
+            aria-label="अध्याय खोजें">
+
+        <button type="button">
+            खोजें
+        </button>
+
+    </div>
+
+
+    <section class="chapters">
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 01</div>
+            <h3>भारत की स्थिति एवं विस्तार</h3>
+            <a href="chapter-01.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 02</div>
+            <h3>भारत का भौतिक विभाजन</h3>
+            <a href="chapter-02.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 03</div>
+            <h3>भारत की नदियाँ</h3>
+            <a href="chapter-03.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 04</div>
+            <h3>भारत की प्रमुख झीलें</h3>
+            <a href="chapter-04.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 05</div>
+            <h3>भारत की मिट्टियाँ</h3>
+            <a href="chapter-05.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 06</div>
+            <h3>भारत की वनस्पति</h3>
+            <a href="chapter-06.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 07</div>
+            <h3>भारतीय मानसून व जलवायु</h3>
+            <a href="chapter-07.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 08</div>
+            <h3>भारतीय कृषि</h3>
+            <a href="chapter-08.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 09</div>
+            <h3>भारत के उद्योग</h3>
+            <a href="chapter-09.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 10</div>
+            <h3>भारत के औद्योगिक प्रदेश</h3>
+            <a href="chapter-10.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 11</div>
+            <h3>भारत में परिवहन</h3>
+            <a href="chapter-11.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 12</div>
+            <h3>भारत में ऊर्जा संसाधन</h3>
+            <a href="chapter-12.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 13</div>
+            <h3>भारत के खनिज</h3>
+            <a href="chapter-13.html">पढ़ें →</a>
+        </div>
+
+        <div class="chapter">
+            <div class="chapter-number">अध्याय 14</div>
+            <h3>भारत की जनसंख्या</h3>
+            <a href="chapter-14.html">पढ़ें →</a>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 भारत का भूगोल | Indian Geography
+    </p>
+
+    <p>
+        UPSC • IAS • PCS • Competitive Examination Study Material
+    </p>
+
+</footer>
+
+</body>
+</html>
