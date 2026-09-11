@@ -1,1 +1,219 @@
+<!-- Chapter 02 Map Section -->
+<section class="map-section">
 
+  <div class="map-heading">
+    <span>CHAPTER 02</span>
+    <h2>भारत का भौतिक विभाजन</h2>
+    <p>PHYSICAL CLASSIFICATION OF INDIA</p>
+  </div>
+
+  <div class="map-card">
+    <div class="map-top">
+      <span class="map-badge">02</span>
+      <span class="map-label">भारत का भौतिक विभाजन</span>
+    </div>
+
+    <div class="map-image-box">
+      <img 
+        src="chapter02-map.jpg" 
+        alt="भारत का भौतिक विभाजन मानचित्र"
+        onclick="openMap()"
+      >
+      <div class="zoom-hint">🔍 तस्वीर को बड़ा करने के लिए क्लिक करें</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Full Screen Image -->
+<div id="mapViewer" class="map-viewer" onclick="closeMap()">
+  <span class="close-map">&times;</span>
+  <img id="fullMap" src="chapter02-map.jpg" alt="भारत का भौतिक विभाजन">
+</div>
+/* ===== CHAPTER 02 MAP DESIGN ===== */
+
+.map-section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.map-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.map-heading span {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 30px;
+  background: #eaf4ff;
+  color: #1769aa;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.map-heading h2 {
+  margin: 12px 0 5px;
+  font-size: 32px;
+  color: #102a43;
+}
+
+.map-heading p {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* Main Card */
+
+.map-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+  border: 1px solid rgba(30,120,200,0.12);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.map-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 55px rgba(0,0,0,0.17);
+}
+
+/* Card Header */
+
+.map-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px 8px 18px;
+}
+
+.map-badge {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #1769aa, #42a5f5);
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(23,105,170,0.25);
+}
+
+.map-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #17324d;
+}
+
+/* Image */
+
+.map-image-box {
+  position: relative;
+  background: #f5f8fc;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.map-image-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 850px;
+  object-fit: contain;
+  transition: 0.4s ease;
+}
+
+.map-image-box:hover img {
+  transform: scale(1.015);
+}
+
+.zoom-hint {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  font-size: 12px;
+  backdrop-filter: blur(8px);
+}
+
+/* Full Screen Viewer */
+
+.map-viewer {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(5,15,30,0.94);
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.map-viewer img {
+  max-width: 95%;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 70px rgba(0,0,0,0.5);
+}
+
+.close-map {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .map-section {
+    margin: 30px auto;
+    padding: 12px;
+  }
+
+  .map-heading h2 {
+    font-size: 25px;
+  }
+
+  .map-label {
+    font-size: 17px;
+  }
+
+  .map-card {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .map-image-box img {
+    max-height: none;
+  }
+
+  .zoom-hint {
+    font-size: 10px;
+  }
+}
+<script>
+function openMap() {
+  document.getElementById("mapViewer").style.display = "flex";
+}
+
+function closeMap() {
+  document.getElementById("mapViewer").style.display = "none";
+}
+</script>
