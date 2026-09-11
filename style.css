@@ -1,1 +1,762 @@
+/* =========================================================
+   BHARAT KA BHUGOL
+   Professional Education Website CSS
+   ========================================================= */
 
+/* ---------- ROOT ---------- */
+
+:root {
+    --primary: #123b5d;
+    --primary-dark: #0b2942;
+    --secondary: #176b87;
+    --accent: #d99a2b;
+
+    --text: #202b36;
+    --muted: #66717c;
+
+    --background: #f5f7f9;
+    --white: #ffffff;
+    --border: #e1e6eb;
+
+    --shadow: 0 6px 22px rgba(18, 59, 93, 0.08);
+    --radius: 10px;
+}
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Arial,
+        "Noto Sans Devanagari",
+        "Mangal",
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.75;
+}
+
+
+/* ---------- LINKS ---------- */
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+
+    min-height: 70px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+
+/* ---------- Logo ---------- */
+
+.logo {
+    color: var(--primary);
+
+    font-size: 22px;
+    font-weight: 800;
+
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+}
+
+
+/* ---------- Navigation ---------- */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    position: relative;
+
+    color: #354452;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 8px 0;
+
+    transition: color 0.2s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--secondary);
+
+    transition: width 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef5f8 0%,
+            #ffffff 55%,
+            #f5f8fa 100%
+        );
+
+    text-align: center;
+
+    padding: 85px 20px 80px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90px;
+    height: 3px;
+
+    background: var(--accent);
+}
+
+
+/* ---------- Hero Tag ---------- */
+
+.hero .tag {
+    display: inline-block;
+
+    margin-bottom: 20px;
+    padding: 6px 16px;
+
+    background: #e8f2f6;
+    color: var(--secondary);
+
+    border: 1px solid #d7e7ed;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ---------- Hero Heading ---------- */
+
+.hero h1 {
+    color: var(--primary);
+
+    font-size: clamp(36px, 6vw, 54px);
+
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    color: var(--secondary);
+
+    font-size: clamp(21px, 3vw, 28px);
+
+    font-weight: 600;
+
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 760px;
+
+    margin: auto;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+
+/* ---------- Main Button ---------- */
+
+.button {
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 12px 27px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 0 5px 15px rgba(18, 59, 93, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.button:hover {
+    background: var(--secondary);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(18, 59, 93, 0.22);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(1200px, 100%);
+
+    margin: auto;
+
+    padding: 65px 20px;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 32px;
+}
+
+.section-title h2 {
+    color: var(--primary);
+
+    font-size: 30px;
+
+    line-height: 1.35;
+
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: var(--muted);
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.intro {
+    position: relative;
+
+    background: var(--white);
+
+    padding: 32px 35px;
+
+    border: 1px solid var(--border);
+
+    border-left: 4px solid var(--secondary);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 60px;
+}
+
+.intro h3 {
+    color: var(--primary);
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.intro p {
+    color: #4d5965;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.search-box {
+    width: min(680px, 100%);
+
+    margin: 0 auto 45px;
+
+    display: flex;
+
+    background: var(--white);
+
+    border-radius: 7px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.search-box input {
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 14px 16px;
+
+    border: 1px solid var(--border);
+
+    border-right: none;
+
+    border-radius: 7px 0 0 7px;
+
+    outline: none;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    font-size: 15px;
+}
+
+.search-box input:focus {
+    border-color: var(--secondary);
+}
+
+.search-box button {
+    flex-shrink: 0;
+
+    padding: 14px 23px;
+
+    border: none;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border-radius: 0 7px 7px 0;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: background 0.2s ease;
+}
+
+.search-box button:hover {
+    background: var(--secondary);
+}
+
+
+/* =========================================================
+   CHAPTERS
+   ========================================================= */
+
+.chapters {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.chapter {
+    position: relative;
+
+    background: var(--white);
+
+    padding: 24px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.chapter:hover {
+    transform: translateY(-3px);
+
+    border-color: #cbd8e0;
+
+    box-shadow: var(--shadow);
+}
+
+.chapter-number {
+    color: var(--secondary);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 5px;
+}
+
+.chapter h3 {
+    color: var(--primary);
+
+    font-size: 19px;
+
+    line-height: 1.45;
+
+    margin-bottom: 10px;
+}
+
+.chapter a {
+    display: inline-block;
+
+    color: var(--secondary);
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: color 0.2s ease;
+}
+
+.chapter a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    background: var(--primary-dark);
+
+    color: var(--white);
+
+    text-align: center;
+
+    padding: 32px 20px;
+
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 4px 0;
+
+    font-size: 14px;
+
+    opacity: 0.88;
+}
+
+
+/* =========================================================
+   CONTENT PAGES
+   Future Chapter / Notes Pages
+   ========================================================= */
+
+.content-page {
+    width: min(900px, 100%);
+
+    margin: auto;
+
+    background: var(--white);
+
+    padding: 40px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+.content-page h1 {
+    color: var(--primary);
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.content-page h2 {
+    color: var(--secondary);
+
+    font-size: 24px;
+
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.content-page h3 {
+    color: var(--primary);
+
+    font-size: 19px;
+
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.content-page p {
+    color: #46515c;
+
+    margin-bottom: 14px;
+}
+
+.content-page ul,
+.content-page ol {
+    padding-left: 25px;
+
+    margin-bottom: 18px;
+}
+
+.content-page li {
+    margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   IMPORTANT FACT BOX
+   ========================================================= */
+
+.fact-box {
+    background: #f2f7f9;
+
+    border-left: 4px solid var(--secondary);
+
+    padding: 18px 20px;
+
+    border-radius: 6px;
+
+    margin: 20px 0;
+}
+
+.fact-box strong {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    margin: 25px 0;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: var(--white);
+}
+
+th,
+td {
+    padding: 12px 14px;
+
+    border: 1px solid var(--border);
+
+    text-align: left;
+}
+
+th {
+    background: #eef4f7;
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .nav {
+        padding: 15px 18px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 18px;
+    }
+
+    .hero {
+        padding: 65px 18px;
+    }
+
+    .container {
+        padding: 45px 16px;
+    }
+
+    .chapters {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .intro {
+        padding: 24px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .search-box {
+        display: flex;
+    }
+
+    .search-box input {
+        font-size: 14px;
+    }
+
+    .search-box button {
+        padding: 13px 17px;
+    }
+
+    .chapter {
+        padding: 21px;
+    }
+
+    .content-page {
+        padding: 25px 20px;
+    }
+
+    .content-page h1 {
+        font-size: 27px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(23, 107, 135, 0.35);
+
+    outline-offset: 2px;
+  }
