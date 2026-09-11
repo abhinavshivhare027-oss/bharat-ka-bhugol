@@ -760,3 +760,25 @@ input:focus-visible {
 
     outline-offset: 2px;
   }
+/* ===== BLUE HEADER ===== */
+
+header {
+    background: linear-gradient(135deg, #064b78, #087f8c) !important;
+    border-bottom: none !important;
+}
+
+header .nav {
+    background: transparent !important;
+}
+
+.logo {
+    color: #ffffff !important;
+}
+
+nav a {
+    color: #ffffff !important;
+}
+
+nav a:hover {
+    color: #ffd43b !important;
+}
