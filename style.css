@@ -782,3 +782,75 @@ nav a {
 nav a:hover {
     color: #ffd43b !important;
 }
+.content-section {
+    margin: 25px auto;
+    max-width: 1000px;
+}
+
+.content-section h2 {
+    background: linear-gradient(135deg, #0077b6, #00a6a6);
+    color: white;
+    padding: 14px 18px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.info-card {
+    background: white;
+    padding: 20px;
+    margin-top: 12px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-left: 5px solid #00a6a6;
+}
+
+.info-card p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.number-list p {
+    background: #f0faff;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.station-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.station-card {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-top: 4px solid #0077b6;
+}
+
+.station-card h3 {
+    color: #0077b6;
+    margin-top: 0;
+}
+
+.station-card p {
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .content-section {
+        margin: 15px 10px;
+    }
+
+    .content-section h2 {
+        font-size: 20px;
+    }
+
+    .info-card p {
+        font-size: 16px;
+    }
+}
