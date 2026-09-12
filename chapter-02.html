@@ -1,197 +1,640 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>भारत का भौतिक विभाजन | Chapter 02</title>
+<title>भारत का भौतिक विभाजन | Chapter 02</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;
+    background:linear-gradient(135deg,#eef7ff,#f8fbff);
+    color:#172b4d;
+    line-height:1.9;
+}
+
+/* ===== TOP HEADER ===== */
+
+.top-header{
+    background:linear-gradient(135deg,#075b9d,#1689d4);
+    color:white;
+    padding:28px 18px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,70,130,.20);
+}
+
+.top-header .chapter-no{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.30);
+    padding:5px 18px;
+    border-radius:30px;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+.top-header h1{
+    font-size:34px;
+    margin:10px 0 3px;
+}
+
+.top-header p{
+    font-size:13px;
+    opacity:.9;
+    letter-spacing:1.5px;
+}
+
+/* ===== MAIN ===== */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:35px 18px 60px;
+}
+
+/* ===== MAP ===== */
+
+.map-card{
+    background:white;
+    padding:18px;
+    border-radius:24px;
+    box-shadow:0 15px 45px rgba(0,0,0,.12);
+    border:1px solid #dfeaf4;
+    margin-bottom:35px;
+}
+
+.map-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.map-number{
+    width:52px;
+    height:52px;
+    min-width:52px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0865a5,#43a5ed);
+    color:white;
+    border-radius:15px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.map-title h2{
+    color:#12395b;
+    font-size:22px;
+}
+
+.map-title p{
+    color:#718096;
+    font-size:13px;
+}
+
+.map-box{
+    background:#f5f9fd;
+    padding:10px;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.map-box img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:13px;
+}
+
+/* ===== INTRODUCTION ===== */
+
+.intro-card{
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    margin-bottom:30px;
+    border-left:5px solid #1689d4;
+}
+
+.intro-card h2{
+    color:#075b9d;
+    margin-bottom:15px;
+    font-size:25px;
+}
+
+.intro-card p{
+    font-size:17px;
+    text-align:justify;
+}
+
+/* ===== DIVISION FLOW ===== */
+
+.flow-card{
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+    margin-bottom:35px;
+}
+
+.flow-card h2{
+    text-align:center;
+    color:#075b9d;
+    margin-bottom:25px;
+}
+
+.flow{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.flow-item{
+    padding:18px;
+    background:linear-gradient(135deg,#f2f9ff,#ffffff);
+    border:1px solid #dcecf8;
+    border-radius:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.flow-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,100,170,.12);
+}
+
+/* ===== SECTION ===== */
+
+.content-section{
+    background:white;
+    padding:28px;
+    border-radius:22px;
+    margin-bottom:30px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:20px;
+    padding-bottom:12px;
+    border-bottom:2px solid #e5eef6;
+}
+
+.section-title .num{
+    background:#e7f4ff;
+    color:#0865a5;
+    padding:5px 12px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    color:#075b9d;
+    font-size:25px;
+}
+
+.content-section p{
+    font-size:17px;
+    margin-bottom:16px;
+    text-align:justify;
+}
+
+/* ===== SUB TITLE ===== */
+
+.sub-title{
+    margin:25px 0 15px;
+    padding:12px 16px;
+    background:#edf7ff;
+    border-left:4px solid #1689d4;
+    border-radius:10px;
+    color:#075b9d;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* ===== LIST ===== */
+
+.custom-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:15px;
+}
+
+.list-item{
+    background:#f8fbfe;
+    border:1px solid #e1edf6;
+    padding:14px 16px;
+    border-radius:12px;
+    font-size:16px;
+}
+
+.list-item strong{
+    color:#075b9d;
+}
+
+/* ===== GENERAL INFO GRID ===== */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.info-box{
+    background:#f8fbff;
+    border:1px solid #dfebf5;
+    padding:17px;
+    border-radius:14px;
+}
+
+.info-box h3{
+    color:#075b9d;
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+    text-align:center;
+    background:#102a43;
+    color:white;
+    padding:22px 15px;
+    font-size:14px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:700px){
+
+    .top-header h1{
+        font-size:27px;
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, "Noto Sans Devanagari", sans-serif;
-      background: #f4f8fc;
-      color: #17324d;
+    .container{
+        padding:25px 10px 45px;
     }
 
-    .chapter02 {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
+    .map-card,
+    .intro-card,
+    .flow-card,
+    .content-section{
+        padding:16px;
+        border-radius:18px;
     }
 
-    .chapter-header {
-      text-align: center;
-      margin-bottom: 30px;
+    .flow,
+    .custom-list,
+    .info-grid{
+        grid-template-columns:1fr;
     }
 
-    .chapter-number {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 30px;
-      background: #e8f3ff;
-      color: #1769aa;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 1px;
+    .section-title h2{
+        font-size:21px;
     }
 
-    .chapter-header h1 {
-      margin: 14px 0 6px;
-      font-size: 34px;
-      color: #102a43;
+    .content-section p,
+    .intro-card p{
+        font-size:16px;
     }
 
-    .chapter-header p {
-      margin: 0;
-      color: #718096;
-      letter-spacing: 2px;
-      font-size: 14px;
-    }
+}
 
-    .map-card {
-      background: white;
-      border-radius: 24px;
-      padding: 20px;
-      box-shadow: 0 15px 45px rgba(0,0,0,0.12);
-      border: 1px solid #e5edf5;
-    }
-
-    .map-title {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .map-number {
-      width: 52px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg,#1769aa,#42a5f5);
-      color: white;
-      border-radius: 15px;
-      font-size: 21px;
-      font-weight: bold;
-    }
-
-    .map-title h2 {
-      margin: 0;
-      font-size: 21px;
-      color: #17324d;
-    }
-
-    .map-title p {
-      margin: 4px 0 0;
-      color: #718096;
-      font-size: 13px;
-    }
-
-    .map-image-box {
-      background: #f5f8fc;
-      border-radius: 18px;
-      padding: 10px;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .chapter-map {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 14px;
-    }
-
-    .map-note {
-      margin-top: 12px;
-      text-align: center;
-      color: #718096;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-
-      .chapter02 {
-        padding: 25px 12px;
-      }
-
-      .chapter-header h1 {
-        font-size: 26px;
-      }
-
-      .map-card {
-        padding: 12px;
-        border-radius: 18px;
-      }
-
-      .map-title h2 {
-        font-size: 18px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <main class="chapter02">
+<!-- ===== HEADER ===== -->
 
-    <div class="chapter-header">
+<header class="top-header">
 
-      <span class="chapter-number">
+    <div class="chapter-no">
         CHAPTER 02
-      </span>
-
-      <h1>भारत का भौतिक विभाजन</h1>
-
-      <p>
-        PHYSICAL CLASSIFICATION OF INDIA
-      </p>
-
     </div>
 
+    <h1>भारत का भौतिक विभाजन</h1>
 
-    <div class="map-card">
+    <p>PHYSICAL CLASSIFICATION OF INDIA</p>
 
-      <div class="map-title">
+</header>
+
+
+<main class="container">
+
+
+<!-- ===== MAP ===== -->
+
+<section class="map-card">
+
+    <div class="map-title">
 
         <div class="map-number">
-          02
+            02
         </div>
 
         <div>
-          <h2>भारत का भौतिक विभाजन</h2>
-
-          <p>
-            भारत का भौतिक विभाजन मानचित्र
-          </p>
+            <h2>भारत का भौतिक विभाजन</h2>
+            <p>भारत का भौतिक विभाजन मानचित्र</p>
         </div>
-
-      </div>
-
-
-      <div class="map-image-box">
-
-        <img
-          src="chapter02-map.jpg"
-          alt="भारत का भौतिक विभाजन मानचित्र"
-          class="chapter-map"
-        >
-
-      </div>
-
-      <div class="map-note">
-        भारत का भौतिक विभाजन — मानचित्र
-      </div>
 
     </div>
 
-  </main>
+    <div class="map-box">
+
+        <img
+        src="../chapter02-map.jpg"
+        alt="भारत का भौतिक विभाजन मानचित्र">
+
+    </div>
+
+</section>
+
+
+<!-- ===== INTRODUCTION ===== -->
+
+<section class="intro-card">
+
+    <h2>भारत का भौतिक विभाजन</h2>
+
+    <p>
+        भारत को भौतिक विभाजन के दृष्टिकोण से 6 भागों में बाँटा जा सकता है:
+    </p>
+
+</section>
+
+
+<!-- ===== SIX DIVISIONS ===== -->
+
+<section class="flow-card">
+
+    <h2>भारत का भौतिक विभाजन</h2>
+
+    <div class="flow">
+
+        <div class="flow-item">
+            हिमालय पर्वतीय प्रदेश
+        </div>
+
+        <div class="flow-item">
+            प्रायद्वीपीय भारत या प्रायद्वीपीय पठार
+        </div>
+
+        <div class="flow-item">
+            सतलज यमुना गंगा ब्रह्मपुत्र के मैदानी प्रदेश
+        </div>
+
+        <div class="flow-item">
+            तटीय प्रदेश
+        </div>
+
+        <div class="flow-item">
+            द्विषीय प्रदेश
+        </div>
+
+        <div class="flow-item">
+            धार का मरुस्थल
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== HIMALAYAN REGION ===== -->
+
+<section class="content-section">
+
+    <div class="section-title">
+
+        <span class="num">01</span>
+
+        <h2>हिमालय पर्वतीय प्रदेश</h2>
+
+    </div>
+
+
+    <p>
+        हिमालय टेथिस सागर के अवशेष के रूप में है, जबकि हिमालय के उत्तर दिशा में स्थित काराकोरम पर्वत अमारालैण्ड का भाग है। इस प्रकार हिमलाय काराकोरम पर्वत की तुलना में अपेक्षाकृत कमजोर है।
+    </p>
+
+    <p>
+        हिमालय पर्वत रूस देश के साइबेरिया क्षेत्र से आने वाली ठण्डी हवाओं से हमारी रक्षा करता है।
+    </p>
+
+    <p>
+        यह भारत के उत्तर दिशा से होने वाले विदेशी आक्रमणों से भी हमारी रक्षा करता है।
+    </p>
+
+    <p>
+        हिमालय से भारत की अनेक नदियों का उद्गम एवं विभिन्न नदियों को जल की प्राप्ति होती है जैसेः- सिंधु, झेलम, चिनाब, रावी, व्यास, सतलज, गंगा, यमुना व इनकी अनेक सहायक नदियों।
+    </p>
+
+    <p>
+        भारत के उत्तरी मैदानी भागों का निर्माण गंगा नदी द्वारा लायी गयी विभिन्न प्रकार की मिट्टियों जैसे खादर व बांगर से हुआ है।
+    </p>
+
+    <p>
+        इन्हीं उपजाऊ मिट्टियों के क्षेत्र में भारत में कृषि का प्रचुर विकास हुआ है। हिमालय क्षेत्र के शीताष्ण कोणधारी वन, सदाबहार वन, अल्पाइन वन इत्यादि से वन आधारित उपजों की प्राप्ति एवं इनसे संबंधित उद्योगों का विकास हुआ है और इन्हीं वनस्पतियों से फलों (सेव, नाशपती, आडु) एवं सूखे मेवों (बादाम, अखरोट) इत्यादि की प्राप्ति होती है।
+    </p>
+
+    <p>
+        हिमालय के बर्फिले क्षेत्रों में भारत के अनेक हिल स्टेशनों का विकास हुआ है जैसे शिमला, मनाली, डलहौजी, नैनीताल मसूरी इत्यादि ।
+    </p>
+
+    <p>
+        हिमालय के पर्वतीय क्षेत्रों में अनेक तीर्थ स्थलों बद्रीनाथ केदारनाथ, गंगोत्री, यमनोत्री, वैष्णोदेवी, अमरनाथ हेमकुण साहिब एवं अनेक बौद्ध मठ नागाग्वाल, हमीर लामासु बौद्ध मठ इत्यादि स्थित हैं।
+    </p>
+
+</section>
+
+
+<!-- ===== HIMALAYA EXPANSION ===== -->
+
+<section class="content-section">
+
+    <div class="section-title">
+
+        <h2>हिमालय का विस्तार व स्थिति</h2>
+
+    </div>
+
+    <p>
+        हिमालय पर्वत का विस्तार भारत के उत्तर व पूर्व दिशा ३ है। हिमालय भारत के अतिरिक्त नेपाल, भूटान व चीन देशा में फैला है। हिमालय का विस्तार भारत के राज्यों/केन्द्र शासित प्रदेशों में है। जिनमें जम्मू कश्मीर, लद्दाख हिमाचल प्रदेश, उत्तराखण्ड, सिक्किम, पश्चिम बंगाल, असम व अरुणाचल प्रदेश है।
+    </p>
+
+    <p>
+        हिमालय की लम्बाई लगभग 2400-2500 किलोमीटर है।
+    </p>
+
+</section>
+
+
+<!-- ===== GENERAL INFORMATION ===== -->
+
+<section class="content-section">
+
+    <div class="section-title">
+
+        <h2>हिमालय पर्वतीय प्रदेश</h2>
+
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>देशों में विस्तार</h3>
+            <p>भारत, नेपाल, भूटान व चीन</p>
+        </div>
+
+        <div class="info-box">
+            <h3>स्थिति</h3>
+            <p>भारत के उत्तर व पूर्व दिशा में फैला हुआ</p>
+        </div>
+
+        <div class="info-box">
+            <h3>देशांतर</h3>
+            <p>74 डिग्री पूर्वी देशांतर से 96 डिग्री पूर्वी देशांतर</p>
+        </div>
+
+        <div class="info-box">
+            <h3>राज्यों / केन्द्र शासित प्रदेशों में विस्तार</h3>
+            <p>जम्मू एवं कश्मीर, लद्दाख</p>
+            <p>हिमाचल प्रदेश, उत्तराखण्ड, सिक्किम, प. बंगाल, असम, अरूणाचल प्रदेश</p>
+        </div>
+
+        <div class="info-box">
+            <h3>लम्बाई</h3>
+            <p>2500 किमी</p>
+        </div>
+
+        <div class="info-box">
+            <h3>चौडाई</h3>
+            <p>400 किमी</p>
+        </div>
+
+        <div class="info-box">
+            <h3>ऊँचाई</h3>
+            <p>5000 मीटर</p>
+        </div>
+
+        <div class="info-box">
+            <h3>अन्य विवरण</h3>
+            <p>नवीन चलित पर्वत</p>
+            <p>टेथिस सागर का भाग</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== PHYSICAL DIVISION ===== -->
+
+<section class="content-section">
+
+    <div class="section-title">
+
+        <h2>हिमालय पर्वतीय प्रदेश — भौतिक विभाजन</h2>
+
+    </div>
+
+    <div class="custom-list">
+
+        <div class="list-item">
+            <strong>(1)</strong> उत्तरी / हिमाद्री
+        </div>
+
+        <div class="list-item">
+            <strong>(क)</strong> लद्दाख हिमालय
+        </div>
+
+        <div class="list-item">
+            <strong>(ख)</strong> जास्कर हिमालय
+        </div>
+
+        <div class="list-item">
+            <strong>(2)</strong> मध्य / हिमालय
+        </div>
+
+        <div class="list-item">
+            <strong>(ग)</strong> पीरपंजाल हिमालय
+        </div>
+
+        <div class="list-item">
+            <strong>(घ)</strong> धौलाधर हिमालय
+        </div>
+
+        <div class="list-item">
+            <strong>(3)</strong> दक्षिणी शिवालिक
+        </div>
+
+        <div class="list-item">
+            <strong>(ङ)</strong> शिवालिक हिमालय
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== REGIONAL DIVISION ===== -->
+
+<section class="content-section">
+
+    <div class="section-title">
+
+        <h2>प्रादेशिक विभाजन</h2>
+
+    </div>
+
+    <div class="custom-list">
+
+        <div class="list-item">
+            <strong>(1)</strong> पंजाब हिमालय
+        </div>
+
+        <div class="list-item">
+            <strong>(2)</strong> कुमायूँ हिमालय
+        </div>
+
+        <div class="list-item">
+            <strong>(3)</strong> नेपाल हिमालय
+        </div>
+
+        <div class="list-item">
+            <strong>(4)</strong> असम हिमालय
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer class="footer">
+
+    भारत का भूगोल • Chapter 02
+
+</footer>
 
 </body>
 </html>
